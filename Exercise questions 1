@@ -1,0 +1,38 @@
+/*
+ * Question:
+ * Create a `Car` class with fields: `brand`, `model`, and `year`.
+ * Write a method to display the car details.
+ * Create two car objects, assign values, and display their details.
+ */
+// Java Program to demonstrate creating objects and using class methods
+
+// Class representing a Car
+class Car {
+    String brand;
+    String model;
+    int year;
+
+    // Method to display car details
+    void display() {
+        System.out.println("In the " + brand + " " + model + ", it was released in " + year);
+    }
+}
+
+// Main class to run the program
+public class Main {
+    public static void main(String[] args) {
+        // Creating first car object
+        Car car1 = new Car();
+        car1.brand = "BMW";
+        car1.model = "B1";
+        car1.year = 2000;
+        car1.display();
+
+        // Creating second car object
+        Car car2 = new Car();
+        car2.brand = "Audi";
+        car2.model = "A4";
+        car2.year = 2015;
+        car2.display();
+    }
+}
