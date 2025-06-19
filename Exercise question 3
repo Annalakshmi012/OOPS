@@ -1,0 +1,35 @@
+/*
+ * Question:
+ * Create a `Student` class with fields: `name`, `age`, and `mark`.
+ * Write a method to check if the student has passed (mark >= 40).
+ * If passed, return "Pass", otherwise return "Fail".
+ * Create a student object, assign values, and print name, age, and result.
+ */
+
+class Student {
+    String name;
+    int age;
+    int mark;
+
+    // Method to find pass or fail result
+    String findResult() {
+        if (mark >= 40) {
+            return "Pass";
+        } else {
+            return "Fail";
+        }
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        // Creating a student object
+        Student s1 = new Student();
+        s1.name = "Lithisha";
+        s1.age = 20;
+        s1.mark = 50;
+
+        // Printing result
+        System.out.println("The student " + s1.name + " is " + s1.age + " years old. Result: " + s1.findResult());
+    }
+}
