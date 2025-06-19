@@ -1,0 +1,77 @@
+/*
+ * Question 5:
+ * Create a `BankAccount` class with fields: `accountNumber` and `balance`.
+ * Add methods: `deposit(int amount)`, `withdraw(int amount)`, and `display()`.
+ * In the main method, use Scanner to get the user's account number and allow them
+ * to choose from deposit, withdraw, or display balance options using a switch case.
+ */
+
+import java.util.Scanner;
+
+class BankAccount {
+    int accountNumber;
+    int balance;
+
+    // Deposit method
+    void deposit(int amount) {
+        balance += amount;
+        System.out.println("Amount deposited successfully: ₹" + amount);
+    }
+
+    // Withdraw method
+    void withdraw(int amount) {
+        if (amount > balance) {
+            System.out.println("Insufficient balance!");
+        } else {
+            balance -= amount;
+            System.out.println("Amount withdrawn successfully: ₹" + amount);
+        }
+    }
+
+    // Display balance
+    void display() {
+        System.out.println("Current balance: ₹" + balance);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        BankAccount b1 = new BankAccount();
+        b1.accountNumber = 12345;
+        b1.balance = 500;
+
+        System.out.print("Enter your account number: ");
+        int enteredAccNo = sc.nextInt();
+
+        if (enteredAccNo == b1.accountNumber) {
+            System.out.println("1. Deposit\n2. Withdraw\n3. Display Balance\nEnter your choice:");
+            int choice = sc.nextInt();
+
+            switch (choice) {
+                case 1:
+                    System.out.print("Enter the deposit amount: ");
+                    int dep = sc.nextInt();
+                    b1.deposit(dep);
+                    break;
+
+                case 2:
+                    System.out.print("Enter the withdraw amount: ");
+                    int with = sc.nextInt();
+                    b1.withdraw(with);
+                    break;
+
+                case 3:
+                    b1.display();
+                    break;
+
+                default:
+                    System.out.println("Invalid choice.");
+            }
+        } else {
+            System.out.println("Invalid account number.");
+        }
+
+        sc.close();
+    }
+}
