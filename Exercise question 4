@@ -1,0 +1,33 @@
+/*
+ * Question 4:
+ * Create a `Book` class with title, author, and price.
+ * Add a constructor to initialize values.
+ * Write a method to display book information.
+ * Create a book object and call the display method.
+ */
+
+class Book {
+    String title;
+    String author;
+    int price;
+
+    // Default constructor to initialize book details
+    Book() {
+        title = "Good Dad Bad Dad";
+        author = "John";
+        price = 150;
+    }
+
+    // Method to display book details
+    void display() {
+        System.out.println("The book \"" + title + "\" by " + author + " is now available at ₹" + price + ".");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        // Creating a Book object
+        Book b1 = new Book();
+        b1.display();
+    }
+}
