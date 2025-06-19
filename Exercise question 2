@@ -1,0 +1,32 @@
+/*
+ * Question:
+ * Create a `Rectangle` class with fields: `length` and `breadth`.
+ * Add a method to calculate and return the area.
+ * Create two rectangle objects and print their area.
+ */
+
+class Rectangle {
+    int length;
+    int breadth;
+
+    // Method to calculate area
+    int calculateArea() {
+        return length * breadth;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        // First rectangle
+        Rectangle r1 = new Rectangle();
+        r1.length = 21;
+        r1.breadth = 32;
+        System.out.println("Area of Rectangle 1: " + r1.calculateArea());
+
+        // Second rectangle
+        Rectangle r2 = new Rectangle();
+        r2.length = 12;
+        r2.breadth = 26;
+        System.out.println("Area of Rectangle 2: " + r2.calculateArea());
+    }
+}
